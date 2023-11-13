@@ -29,19 +29,15 @@ while True:
     #compare those values
     nValues = [item for item in new_houses if item not in og_houses]
     if nValues:
-        EMAIL_ADDRESS = os.environ.get('google_dev_email')
-        EMAIL_PASSWORD = os.environ.get('google_dev_password')
-
+        #append all list values from nValue to list_of_items
+        list_of_items = "\n".join(nValues)
+        EMAIL_ADDRESS = os.environ.get('EMAIL_ADDRESS')
+        EMAIL_PASSWORD = os.environ.get('EMAIL_PASSWORD')
         msg = EmailMessage()
-        msg['Subject'] = 'NEW HOME ON THE MARKET!'
+        msg['Subject'] = 'New House on the Market!'
         msg['From'] = EMAIL_ADDRESS
-        msg['To'] = 'mlombardo226@gmail.com '
-        msg.set_content(nValues)
-
+        msg['To'] = EMAIL_ADDRESS
+        msg.set_content(list_of_items)
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
             smtp.send_message(msg)
-
-
-
-
