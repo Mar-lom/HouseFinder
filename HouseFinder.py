@@ -26,8 +26,8 @@ def modify_json_listing_date(house_soup): #convert the listing date to a integer
     for house in house_soup:
         if house['Listing Date']:
             remove_hyph = re.sub("-", "", house['Listing Date'])
-            blah = int(remove_hyph[:8]) ##removes the first 8 characters of the string
-            house['Listing Date'] = blah
+            convert_to_int = int(remove_hyph[:8]) ##removes the first 8 characters of the string
+            house['Listing Date'] = convert_to_int
     return house_soup
 def sort_houses(sorted_soup):
     sorted_houses = sorted(sorted_soup,  key=lambda x: x['Listing Date'], reverse=True)
