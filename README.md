@@ -9,12 +9,16 @@ This Python script automates the process of finding new houses on the market and
   - `beautifulsoup4`
   - `requests`
   - `smtplib` (for sending emails)
+ 
+## Current Version
+- Daily emails summarizing "NEW" listing on Thunder Bay Houses.
+- Sorts posting date from descending order.
 
 ## On the Horizon 🌅
-1. a decent ReadMe File
-2. Filtered Results
-3. IFind
-4. ThunderBay Houses
+3. Add IFind
+2. Add Parameters to Filter Results
+
 
 ## Future Adds 🤖
-1. Email Sign up
+1. Add Realator
+2. Live Version
