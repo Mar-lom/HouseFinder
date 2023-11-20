@@ -21,4 +21,6 @@ This Python script automates the process of finding new houses on the market and
 
 ## Future Adds 🤖
 1. Add Realator
-2. Live Version
+2. Daily Interest Rates
+3. News Surounding Real estate in canada
+4. Live Version
